@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  php_property:
+    build: .
+    container_name: php_property
+    image: latest
+    volumes:
+      - ./localhost:/var/www/html
+      - ./httpd.vhost.conf:/etc/apache2/sites-available/000-default.conf
+    ports:
+      - 84:80
+
+  property_database:
+    image: mariadb:10.2
+    container_name: property_database
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "32106:3306"
+    volumes:
+      - ./database/data:/var/lib/mysql
+      - ./database/conf.d:/etc/mysql/conf.d:ro
+    environment:
+      MYSQL_USER: Djony
+      MYSQL_PASSWORD: Djony!!
+      MYSQL_ROOT_PASSWORD: Djony
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
