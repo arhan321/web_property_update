@@ -13,113 +13,113 @@ if(isset($_POST['post'])){
 
    $id = create_unique_id();
    $property_name = $_POST['property_name'];
-   $property_name = filter_var($property_name, FILTER_SANITIZE_STRING);
+   $property_name = filter_var($property_name);
    $price = $_POST['price'];
-   $price = filter_var($price, FILTER_SANITIZE_STRING);
+   $price = filter_var($price);
    $address = $_POST['address'];
-   $address = filter_var($address, FILTER_SANITIZE_STRING);
+   $address = filter_var($address);
    $offer = $_POST['offer'];
-   $offer = filter_var($offer, FILTER_SANITIZE_STRING);
+   $offer = filter_var($offer);
    $type = $_POST['type'];
-   $type = filter_var($type, FILTER_SANITIZE_STRING);
+   $type = filter_var($type);
    $status = $_POST['status'];
-   $status = filter_var($status, FILTER_SANITIZE_STRING);
+   $status = filter_var($status);
    $furnished = $_POST['furnished'];
-   $furnished = filter_var($furnished, FILTER_SANITIZE_STRING);
+   $furnished = filter_var($furnished);
    $bhk = $_POST['bhk'];
-   $bhk = filter_var($bhk, FILTER_SANITIZE_STRING);
+   $bhk = filter_var($bhk);
    $bedroom = $_POST['bedroom'];
-   $bedroom = filter_var($bedroom, FILTER_SANITIZE_STRING);
+   $bedroom = filter_var($bedroom);
    $bathroom = $_POST['bathroom'];
-   $bathroom = filter_var($bathroom, FILTER_SANITIZE_STRING);
+   $bathroom = filter_var($bathroom);
    $balcony = $_POST['balcony'];
-   $balcony = filter_var($balcony, FILTER_SANITIZE_STRING);
+   $balcony = filter_var($balcony);
    $carpet = $_POST['carpet'];
-   $carpet = filter_var($carpet, FILTER_SANITIZE_STRING); 
+   $carpet = filter_var($carpet); 
    $age = $_POST['age'];
-   $age = filter_var($age, FILTER_SANITIZE_STRING);
+   $age = filter_var($age);
    $total_floors = $_POST['total_floors'];
-   $total_floors = filter_var($total_floors, FILTER_SANITIZE_STRING);
+   $total_floors = filter_var($total_floors);
    $room_floor = $_POST['room_floor'];
-   $room_floor = filter_var($room_floor, FILTER_SANITIZE_STRING);
+   $room_floor = filter_var($room_floor);
    $description = $_POST['description'];
-   $description = filter_var($description, FILTER_SANITIZE_STRING);
+   $description = filter_var($description);
 
    if(isset($_POST['lift'])){
       $lift = $_POST['lift'];
-      $lift = filter_var($lift, FILTER_SANITIZE_STRING);
+      $lift = filter_var($lift);
    }else{
       $lift = 'no';
    }
    if(isset($_POST['security_guard'])){
       $security_guard = $_POST['security_guard'];
-      $security_guard = filter_var($security_guard, FILTER_SANITIZE_STRING);
+      $security_guard = filter_var($security_guard);
    }else{
       $security_guard = 'no';
    }
    if(isset($_POST['play_ground'])){
       $play_ground = $_POST['play_ground'];
-      $play_ground = filter_var($play_ground, FILTER_SANITIZE_STRING);
+      $play_ground = filter_var($play_ground);
    }else{
       $play_ground = 'no';
    }
    if(isset($_POST['garden'])){
       $garden = $_POST['garden'];
-      $garden = filter_var($garden, FILTER_SANITIZE_STRING);
+      $garden = filter_var($garden);
    }else{
       $garden = 'no';
    }
    if(isset($_POST['water_supply'])){
       $water_supply = $_POST['water_supply'];
-      $water_supply = filter_var($water_supply, FILTER_SANITIZE_STRING);
+      $water_supply = filter_var($water_supply);
    }else{
       $water_supply = 'no';
    }
    if(isset($_POST['power_backup'])){
       $power_backup = $_POST['power_backup'];
-      $power_backup = filter_var($power_backup, FILTER_SANITIZE_STRING);
+      $power_backup = filter_var($power_backup);
    }else{
       $power_backup = 'no';
    }
    if(isset($_POST['parking_area'])){
       $parking_area = $_POST['parking_area'];
-      $parking_area = filter_var($parking_area, FILTER_SANITIZE_STRING);
+      $parking_area = filter_var($parking_area);
    }else{
       $parking_area = 'no';
    }
    if(isset($_POST['gym'])){
       $gym = $_POST['gym'];
-      $gym = filter_var($gym, FILTER_SANITIZE_STRING);
+      $gym = filter_var($gym);
    }else{
       $gym = 'no';
    }
    if(isset($_POST['shopping_mall'])){
       $shopping_mall = $_POST['shopping_mall'];
-      $shopping_mall = filter_var($shopping_mall, FILTER_SANITIZE_STRING);
+      $shopping_mall = filter_var($shopping_mall);
    }else{
       $shopping_mall = 'no';
    }
    if(isset($_POST['hospital'])){
       $hospital = $_POST['hospital'];
-      $hospital = filter_var($hospital, FILTER_SANITIZE_STRING);
+      $hospital = filter_var($hospital);
    }else{
       $hospital = 'no';
    }
    if(isset($_POST['school'])){
       $school = $_POST['school'];
-      $school = filter_var($school, FILTER_SANITIZE_STRING);
+      $school = filter_var($school);
    }else{
       $school = 'no';
    }
    if(isset($_POST['market_area'])){
       $market_area = $_POST['market_area'];
-      $market_area = filter_var($market_area, FILTER_SANITIZE_STRING);
+      $market_area = filter_var($market_area);
    }else{
       $market_area = 'no';
    }
 
    $image_02 = $_FILES['image_02']['name'];
-   $image_02 = filter_var($image_02, FILTER_SANITIZE_STRING);
+   $image_02 = filter_var($image_02);
    $image_02_ext = pathinfo($image_02, PATHINFO_EXTENSION);
    $rename_image_02 = create_unique_id().'.'.$image_02_ext;
    $image_02_tmp_name = $_FILES['image_02']['tmp_name'];
@@ -137,7 +137,7 @@ if(isset($_POST['post'])){
    }
 
    $image_03 = $_FILES['image_03']['name'];
-   $image_03 = filter_var($image_03, FILTER_SANITIZE_STRING);
+   $image_03 = filter_var($image_03);
    $image_03_ext = pathinfo($image_03, PATHINFO_EXTENSION);
    $rename_image_03 = create_unique_id().'.'.$image_03_ext;
    $image_03_tmp_name = $_FILES['image_03']['tmp_name'];
@@ -155,7 +155,7 @@ if(isset($_POST['post'])){
    }
 
    $image_04 = $_FILES['image_04']['name'];
-   $image_04 = filter_var($image_04, FILTER_SANITIZE_STRING);
+   $image_04 = filter_var($image_04);
    $image_04_ext = pathinfo($image_04, PATHINFO_EXTENSION);
    $rename_image_04 = create_unique_id().'.'.$image_04_ext;
    $image_04_tmp_name = $_FILES['image_04']['tmp_name'];
@@ -173,7 +173,7 @@ if(isset($_POST['post'])){
    }
 
    $image_05 = $_FILES['image_05']['name'];
-   $image_05 = filter_var($image_05, FILTER_SANITIZE_STRING);
+   $image_05 = filter_var($image_05);
    $image_05_ext = pathinfo($image_05, PATHINFO_EXTENSION);
    $rename_image_05 = create_unique_id().'.'.$image_05_ext;
    $image_05_tmp_name = $_FILES['image_05']['tmp_name'];
@@ -191,7 +191,7 @@ if(isset($_POST['post'])){
    }
 
    $image_01 = $_FILES['image_01']['name'];
-   $image_01 = filter_var($image_01, FILTER_SANITIZE_STRING);
+   $image_01 = filter_var($image_01);
    $image_01_ext = pathinfo($image_01, PATHINFO_EXTENSION);
    $rename_image_01 = create_unique_id().'.'.$image_01_ext;
    $image_01_tmp_name = $_FILES['image_01']['tmp_name'];
@@ -279,17 +279,17 @@ if(isset($_POST['post'])){
             </select>
          </div>
          <div class="box">
-            <p>how many BHK <span>*</span></p>
+            <p>kasur <span>*</span></p>
             <select name="bhk" required class="input">
-               <option value="1">1 BHK</option>
-               <option value="2">2 BHK</option>
-               <option value="3">3 BHK</option>
-               <option value="4">4 BHK</option>
-               <option value="5">5 BHK</option>
-               <option value="6">6 BHK</option>
-               <option value="7">7 BHK</option>
-               <option value="8">8 BHK</option>
-               <option value="9">9 BHK</option>
+               <option value="1">1 kasur</option>
+               <option value="2">2 kasur</option>
+               <option value="3">3 kasur</option>
+               <option value="4">4 kasur</option>
+               <option value="5">5 kasur</option>
+               <option value="6">6 kasur</option>
+               <option value="7">7 kasur</option>
+               <option value="8">8 kasur</option>
+               <option value="9">9 kasur</option>
             </select>
          </div>
          <div class="box">
@@ -351,13 +351,6 @@ if(isset($_POST['post'])){
          <div class="box">
             <p>floor room <span>*</span></p>
             <input type="number" name="room_floor" required min="0" max="99" maxlength="2" placeholder="property floor number" class="input">
-         </div>
-         <div class="box">
-            <p>loan <span>*</span></p>
-            <select name="loan" required class="input">
-               <option value="available">available</option>
-               <option value="not available">not available</option>
-            </select>
          </div>
       </div>
       <div class="box">

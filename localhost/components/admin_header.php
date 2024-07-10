@@ -4,7 +4,7 @@
    <div id="close-btn"><i class="fas fa-times"></i></div>
 
    <a href="dashboard.php" class="logo">AdminPanel.</a>
-   <a href="dashboard.php" class="logo">TututMul Property</a>
+   <a href="dashboard.php" class="logo">property</a>
 
    <nav class="navbar">
       <a href="dashboard.php"><i class="fas fa-home"></i><span>home</span></a>

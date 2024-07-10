@@ -12,7 +12,7 @@ if(isset($_COOKIE['admin_id'])){
 if(isset($_POST['delete'])){
 
    $delete_id = $_POST['delete_id'];
-   $delete_id = filter_var($delete_id, FILTER_SANITIZE_STRING);
+   $delete_id = filter_var($delete_id);
 
    $verify_delete = $conn->prepare("SELECT * FROM `messages` WHERE id = ?");
    $verify_delete->execute([$delete_id]);
@@ -66,7 +66,7 @@ if(isset($_POST['delete'])){
    <?php
       if(isset($_POST['search_box']) OR isset($_POST['search_btn'])){
          $search_box = $_POST['search_box'];
-         $search_box = filter_var($search_box, FILTER_SANITIZE_STRING);
+         $search_box = filter_var($search_box);
          $select_messages = $conn->prepare("SELECT * FROM `messages` WHERE name LIKE '%{$search_box}%' OR number LIKE '%{$search_box}%' OR email LIKE '%{$search_box}%'");
          $select_messages->execute();
       }else{

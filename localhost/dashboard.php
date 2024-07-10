@@ -83,7 +83,7 @@ if(isset($_COOKIE['user_id'])){
       ?>
       <h3><?= $total_requests_sent; ?></h3>
       <p>requests sent</p>
-      <a href="saved.php" class="btn">view saved properties</a>
+      <a href="" class="btn">self request</a>
       </div>
 
       <div class="box">

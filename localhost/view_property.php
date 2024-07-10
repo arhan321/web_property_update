@@ -82,7 +82,7 @@ include 'components/save_send.php';
       <h3 class="name"><?= $fetch_property['property_name']; ?></h3>
       <p class="location"><i class="fas fa-map-marker-alt"></i><span><?= $fetch_property['address']; ?></span></p>
       <div class="info">
-         <p><i class="fa-solid fa-rupiah-sign"></i><span><?= $fetch_property['price']; ?></span></p>
+      <p><i class="fa-solid fa-rupiah-sign"></i><span><?= number_format($fetch_property['price'], 0, ',', '.'); ?></span></p>
          <p><i class="fas fa-user"></i><span><?= $fetch_user['name']; ?></span></p>
          <p><i class="fas fa-phone"></i><a href="tel:1234567890"><?= $fetch_user['number']; ?></a></p>
          <p><i class="fas fa-building"></i><span><?= $fetch_property['type']; ?></span></p>
@@ -92,14 +92,14 @@ include 'components/save_send.php';
       <h3 class="title">details</h3>
       <div class="flex">
          <div class="box">
-            <p><i>rooms :</i><span><?= $fetch_property['bhk']; ?> BHK</span></p>
+            <p><i>informasi kasur :</i><span><?= $fetch_property['bhk']; ?> kasur</span></p>
             <p><i>status :</i><span><?= $fetch_property['status']; ?></span></p>
             <p><i>bedroom :</i><span><?= $fetch_property['bedroom']; ?></span></p>
             <p><i>bathroom :</i><span><?= $fetch_property['bathroom']; ?></span></p>
             <p><i>balcony :</i><span><?= $fetch_property['balcony']; ?></span></p>
          </div>
          <div class="box">
-            <p><i>carpet area :</i><span><?= $fetch_property['carpet']; ?>sqft</span></p>
+            <p><i>carpet area :</i><span><?= $fetch_property['carpet']; ?> carpet</span></p>
             <p><i>age :</i><span><?= $fetch_property['age']; ?> years</span></p>
             <p><i>total floors :</i><span><?= $fetch_property['total_floors']; ?></span></p>
             <p><i>room floor :</i><span><?= $fetch_property['room_floor']; ?></span></p>

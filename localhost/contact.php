@@ -12,13 +12,13 @@ if(isset($_POST['send'])){
 
    $msg_id = create_unique_id();
    $name = $_POST['name'];
-   $name = filter_var($name, FILTER_SANITIZE_STRING);
+   $name = filter_var($name);
    $email = $_POST['email'];
-   $email = filter_var($email, FILTER_SANITIZE_STRING);
+   $email = filter_var($email);
    $number = $_POST['number'];
-   $number = filter_var($number, FILTER_SANITIZE_STRING);
+   $number = filter_var($number);
    $message = $_POST['message'];
-   $message = filter_var($message, FILTER_SANITIZE_STRING);
+   $message = filter_var($message);
 
    $verify_contact = $conn->prepare("SELECT * FROM `messages` WHERE name = ? AND email = ? AND number = ? AND message = ?");
    $verify_contact->execute([$name, $email, $number, $message]);

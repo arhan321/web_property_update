@@ -23,7 +23,7 @@ if(isset($_POST['save'])){
 
       $save_id = create_unique_id();
       $property_id = $_POST['property_id'];
-      $property_id = filter_var($property_id, FILTER_SANITIZE_STRING);
+      $property_id = filter_var($property_id);
 
       $verify_saved = $conn->prepare("SELECT * FROM `saved` WHERE property_id = ? and user_id = ?");
       $verify_saved->execute([$property_id, $user_id]);
@@ -48,7 +48,7 @@ if(isset($_POST['send'])){
 
       $request_id = create_unique_id();
       $property_id = $_POST['property_id'];
-      $property_id = filter_var($property_id, FILTER_SANITIZE_STRING);
+      $property_id = filter_var($property_id);
 
       $select_receiver = $conn->prepare("SELECT user_id FROM `property` WHERE id = ? LIMIT 1");
       $select_receiver->execute([$property_id]);

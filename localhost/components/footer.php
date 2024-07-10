@@ -20,10 +20,10 @@
       </div>
 
       <div class="box">
-         <a href="#"><span>facebook</span><i class="fab fa-facebook-f"></i></a>
-         <a href="#"><span>twitter</span><i class="fab fa-twitter"></i></a>
-         <a href="#"><span>linkedin</span><i class="fab fa-linkedin"></i></a>
-         <a href="#"><span>instagram</span><i class="fab fa-instagram"></i></a>
+         <a href="https://www.facebook.com/"><span>facebook</span><i class="fab fa-facebook-f"></i></a>
+         <a href="https://x.com/home?lang=id"><span>twitter</span><i class="fab fa-twitter"></i></a>
+         <a href="https://www.linkedin.com/"><span>linkedin</span><i class="fab fa-linkedin"></i></a>
+         <a href="https://www.instagram.com/"><span>instagram</span><i class="fab fa-instagram"></i></a>
 
       </div>
 

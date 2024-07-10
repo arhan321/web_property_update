@@ -5,9 +5,9 @@ include '../components/connect.php';
 if(isset($_POST['submit'])){
 
    $name = $_POST['name'];
-   $name = filter_var($name, FILTER_SANITIZE_FULL_SPECIAL_CHARS); 
+   $name = filter_var($name); 
    $pass = $_POST['pass'];
-   $pass = filter_var($pass, FILTER_SANITIZE_FULL_SPECIAL_CHARS); 
+   $pass = filter_var($pass); 
 
    $select_admins = $conn->prepare("SELECT * FROM `admins` WHERE name = ? LIMIT 1");
    $select_admins->execute([$name]);
@@ -60,7 +60,7 @@ if(isset($_POST['submit'])){
 
    <form action="" method="POST">
       <h3>welcome back!</h3>
-      <p>Dashboard<span> Admin</span> TututMul<span>Property</span></p>
+      <p>Dashboard<span> Admin</span> <span>Property</span></p>
       <input type="text" name="name" placeholder="enter username" maxlength="20" class="box" required oninput="this.value = this.value.replace(/\s/g, '')">
       <input type="password" name="pass" placeholder="enter password" maxlength="20" class="box" required oninput="this.value = this.value.replace(/\s/g, '')">
       <input type="submit" value="login now" name="submit" class="btn">

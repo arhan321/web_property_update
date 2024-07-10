@@ -12,7 +12,7 @@ if(isset($_COOKIE['admin_id'])){
 if(isset($_POST['delete'])){
 
    $delete_id = $_POST['delete_id'];
-   $delete_id = filter_var($delete_id, FILTER_SANITIZE_STRING);
+   $delete_id = filter_var($delete_id);
 
    $verify_delete = $conn->prepare("SELECT * FROM `property` WHERE id = ?");
    $verify_delete->execute([$delete_id]);
@@ -86,7 +86,7 @@ if(isset($_POST['delete'])){
    <?php
       if(isset($_POST['search_box']) OR isset($_POST['search_btn'])){
          $search_box = $_POST['search_box'];
-         $search_box = filter_var($search_box, FILTER_SANITIZE_STRING);
+         $search_box = filter_var($search_box);
          $select_listings = $conn->prepare("SELECT * FROM `property` WHERE property_name LIKE '%{$search_box}%' OR address LIKE '%{$search_box}%' ORDER BY date DESC");
          $select_listings->execute();
       }else{
@@ -131,7 +131,7 @@ if(isset($_POST['delete'])){
          <p><i class="far fa-image"></i><span><?= $total_images; ?></span></p>
          <img src="../uploaded_files/<?= $fetch_listing['image_01']; ?>" alt="">
       </div>
-      <p class="price"><i class="fas fa-indian-rupee-sign"></i><?= $fetch_listing['price']; ?></p>
+      <p class="price"><i class="fa-solid fa-rupiah-sign"></i><?= number_format($fetch_listing['price'], 0, ',', '.'); ?></p>
       <h3 class="name"><?= $fetch_listing['property_name']; ?></h3>
       <p class="location"><i class="fas fa-map-marker-alt"></i><?= $fetch_listing['address']; ?></p>
       <form action="" method="POST">

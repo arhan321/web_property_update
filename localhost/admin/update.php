@@ -16,7 +16,7 @@ $fetch_profile = $select_profile->fetch(PDO::FETCH_ASSOC);
 if(isset($_POST['submit'])){
 
    $name = $_POST['name'];
-   $name = filter_var($name, FILTER_SANITIZE_STRING); 
+   $name = filter_var($name); 
 
    if(!empty($name)){
       $verify_name = $conn->prepare("SELECT * FROM `admins` WHERE name = ?");
@@ -33,11 +33,11 @@ if(isset($_POST['submit'])){
    $empty_pass = 'da39a3ee5e6b4b0d3255bfef95601890afd80709';
    $prev_pass = $fetch_profile['password'];
    $old_pass = sha1($_POST['old_pass']);
-   $old_pass = filter_var($old_pass, FILTER_SANITIZE_STRING);
+   $old_pass = filter_var($old_pass);
    $new_pass = sha1($_POST['new_pass']);
-   $new_pass = filter_var($new_pass, FILTER_SANITIZE_STRING);
+   $new_pass = filter_var($new_pass);
    $c_pass = sha1($_POST['c_pass']);
-   $c_pass = filter_var($c_pass, FILTER_SANITIZE_STRING);
+   $c_pass = filter_var($c_pass);
 
    if($old_pass != $empty_pass){
       if($old_pass != $prev_pass){

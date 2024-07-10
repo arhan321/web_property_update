@@ -7,11 +7,9 @@ if(isset($_POST['submit'])){
    $email = $_POST['email'];
    $pass = sha1($_POST['pass']);
 
-   // Membersihkan input dari potensi serangan SQL Injection
-   $email = filter_var($email, FILTER_SANITIZE_EMAIL);
-   $pass = filter_var($pass, FILTER_SANITIZE_SPECIAL_CHARS); // Mengganti FILTER_SANITIZE_STRING dengan FILTER_SANITIZE_SPECIAL_CHARS
+   $email = filter_var($email);
+   $pass = filter_var($pass); 
 
-   // Persiapkan pernyataan SQL dengan parameter terikat untuk menghindari serangan SQL Injection
    $select_users = $conn->prepare("SELECT * FROM `users` WHERE email = ? AND password = ? LIMIT 1");
    $select_users->execute([$email, $pass]);
    $row = $select_users->fetch(PDO::FETCH_ASSOC);
@@ -19,7 +17,7 @@ if(isset($_POST['submit'])){
    if($select_users->rowCount() > 0){
       setcookie('user_id', $row['id'], time() + 60*60*24*30, '/');
       header('location:home.php');
-      exit(); // Jangan lupa keluar setelah melakukan redirect
+      exit(); 
    }else{
       $warning_msg[] = 'Incorrect username or password!';
    }

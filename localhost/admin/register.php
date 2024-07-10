@@ -13,11 +13,11 @@ if(isset($_POST['submit'])){
 
    $id = create_unique_id();
    $name = $_POST['name'];
-   $name = filter_var($name, FILTER_SANITIZE_STRING); 
+   $name = filter_var($name); 
    $pass = sha1($_POST['pass']);
-   $pass = filter_var($pass, FILTER_SANITIZE_STRING); 
+   $pass = filter_var($pass); 
    $c_pass = sha1($_POST['c_pass']);
-   $c_pass = filter_var($c_pass, FILTER_SANITIZE_STRING);   
+   $c_pass = filter_var($c_pass);   
 
    $select_admins = $conn->prepare("SELECT * FROM `admins` WHERE name = ?");
    $select_admins->execute([$name]);

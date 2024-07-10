@@ -17,7 +17,7 @@ services:
     restart: unless-stopped
     tty: true
     ports:
-      - "32106:3306"
+      - "22106:3306"
     volumes:
       - ./database/data:/var/lib/mysql
       - ./database/conf.d:/etc/mysql/conf.d:ro
@@ -27,3 +27,12 @@ services:
       MYSQL_ROOT_PASSWORD: Djony
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
+
+  phpmyadmin_mppl:
+    image: phpmyadmin:latest
+    container_name: phpmyadmin_mppl
+    restart: always
+    ports:
+      - 9051:80
+    environment:
+      - PMA_ARBITRARY=1

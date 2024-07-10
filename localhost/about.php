@@ -41,7 +41,7 @@ if(isset($_COOKIE['user_id'])){
       </div>
       <div class="content">
          <h3>why choose us?</h3>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum dolorem provident voluptatum distinctio laborum veritatis vitae suscipit praesentium fugiat unde?</p>
+         <p>Kami menyediakan layanan terbaik dengan tim berdedikasi yang memahami kebutuhan Anda. Dengan database properti luas, mulai dari apartemen mewah hingga rumah keluarga, kami menawarkan banyak pilihan. Tim profesional kami yang berpengalaman memberikan saran ahli dan memastikan proses pembelian atau penyewaan berjalan lancar. Kepuasan klien adalah prioritas kami, dibuktikan oleh banyak testimoni positif. Kami menjamin transparansi dan kejujuran dalam semua transaksi. Dukungan kami hadir di setiap langkah, dari pencarian awal hingga dokumen akhir. Kami juga menawarkan properti di lokasi strategis dengan akses mudah ke fasilitas penting, menjadikan hidup Anda nyaman dan praktis</p>
          <a href="contact.php" class="inline-btn">contact us</a>
       </div>
    </div>
@@ -65,19 +65,19 @@ if(isset($_COOKIE['user_id'])){
       <div class="box">
          <img src="images/step-1.png" alt="">
          <h3>search property</h3>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, placeat.</p>
+         <p>pada web ini bisa mencari property sesuai dengan yang anda inginkan</p>
       </div>
 
       <div class="box">
          <img src="images/step-2.png" alt="">
          <h3>contact agents</h3>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, placeat.</p>
+         <p>bisa menghubungi agent property</p>
       </div>
 
       <div class="box">
          <img src="images/step-3.png" alt="">
          <h3>enjoy property</h3>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, placeat.</p>
+         <p>semoga property yang anda harapkan ada di web ini.</p>
       </div>
 
    </div>
@@ -101,7 +101,7 @@ if(isset($_COOKIE['user_id'])){
          <div class="user">
             <img src="images/pic-1.png" alt="">
             <div>
-               <h3>john deo</h3>
+               <h3>atar</h3>
                <div class="stars">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
@@ -111,16 +111,16 @@ if(isset($_COOKIE['user_id'])){
                </div>
             </div>
          </div>
-         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci voluptates delectus distinctio quam sequi error eum suscipit tempore inventore ex!</p>
+         <p>property yang saya harapkan adaa !!!</p>
       </div>
 
       <div class="box"
       data-aos="fade-up"
    data-aos-duration="1500">
          <div class="user">
-            <img src="images/pic-2.png" alt="">
+            <img src="images/pic-1.png" alt="">
             <div>
-               <h3>john deo</h3>
+               <h3>febru ardiansyah</h3>
                <div class="stars">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
@@ -130,7 +130,7 @@ if(isset($_COOKIE['user_id'])){
                </div>
             </div>
          </div>
-         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci voluptates delectus distinctio quam sequi error eum suscipit tempore inventore ex!</p>
+         <p>rumah di web ini sesuai dengan harapakan saya, keren !!</p>
       </div>
 
       <div class="box"
@@ -139,7 +139,7 @@ if(isset($_COOKIE['user_id'])){
          <div class="user">
             <img src="images/pic-3.png" alt="">
             <div>
-               <h3>john deo</h3>
+               <h3>noval BT</h3>
                <div class="stars">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
@@ -149,16 +149,16 @@ if(isset($_COOKIE['user_id'])){
                </div>
             </div>
          </div>
-         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci voluptates delectus distinctio quam sequi error eum suscipit tempore inventore ex!</p>
+         <p>web ini sangatlah mantap dan profesional</p>
       </div>
 
       <div class="box"
       data-aos="fade-up"
       data-aos-duration="1500">
          <div class="user">
-            <img src="images/pic-4.png" alt="">
+            <img src="images/pic-3.png" alt="">
             <div>
-               <h3>john deo</h3>
+               <h3>mawan</h3>
                <div class="stars">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
@@ -168,7 +168,7 @@ if(isset($_COOKIE['user_id'])){
                </div>
             </div>
          </div>
-         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci voluptates delectus distinctio quam sequi error eum suscipit tempore inventore ex!</p>
+         <p>web mantap sekali</p>
       </div>
 
       <div class="box"
@@ -177,7 +177,7 @@ if(isset($_COOKIE['user_id'])){
          <div class="user">
             <img src="images/pic-5.png" alt="">
             <div>
-               <h3>john deo</h3>
+               <h3>aryo</h3>
                <div class="stars">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
@@ -187,7 +187,7 @@ if(isset($_COOKIE['user_id'])){
                </div>
             </div>
          </div>
-         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci voluptates delectus distinctio quam sequi error eum suscipit tempore inventore ex!</p>
+         <p>aku wis dapet umah neng jowo</p>
       </div>
 
       <div class="box"
@@ -196,7 +196,7 @@ if(isset($_COOKIE['user_id'])){
          <div class="user">
             <img src="images/pic-6.png" alt="">
             <div>
-               <h3>john deo</h3>
+               <h3>pramuja</h3>
                <div class="stars">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
@@ -206,7 +206,7 @@ if(isset($_COOKIE['user_id'])){
                </div>
             </div>
          </div>
-         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci voluptates delectus distinctio quam sequi error eum suscipit tempore inventore ex!</p>
+         <p>rumah yang saya cari dan cocok sudah tersedia disini !!</p>
       </div>
 
    </div>
